@@ -1,0 +1,386 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Сайт о любимой игре">
+        <title>Логические схемы в Minecraft</title>
+        <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <img src="images/1_Site_Logo.png" alt="IMAGE DOWNLOAD ERROR!">
+                <a href="index.html">
+                    <h1>Главная</h1>
+                </a>
+                <a class="selected_page" href="Elements.html">
+                    <h1>Логические элементы</h1>
+                </a>
+                <a href="Generators.html">
+                    <h1>Тактовые генераторы</h1>
+                </a>
+                <button id="Autoscroll">Автоскролл: OFF</button>
+            </nav>
+        </header>
+        <main>
+            <div>
+                <div class="buttons">
+                    <button id="Current_Date">Показать текущую дату</button>
+                    <button id="Change_Color">Изменить цвет фона</button>
+                </div>
+                <h2>
+                    <i>Содержание:</i>
+                </h2>
+                <ol>
+                    <li>
+                        <a href="#Basic">Простейшие логические элементы</a>
+                    </li>
+                    <li>
+                        <a href="#AND">Логическое "И"</a>
+                    </li>
+                    <li>
+                        <a href="#OR">Логическое "ИЛИ"</a>
+                    </li>
+                    <li>
+                        <a href="#NOT">Логическое "НЕ"</a>
+                    </li>
+                    <li>
+                        <a href="#Additional">Более сложные логические элементы</a>
+                    </li>
+                    <li>
+                        <a href="#NAND">Элемент "И-НЕ"</a>
+                    </li>
+                    <li id="Basic">
+                        <a href="#NOR">Элемент "ИЛИ-НЕ"</a>
+                    </li>
+                    <li>
+                        <a href="#XOR">Элемент "Исключающее «ИЛИ»"</a>
+                    </li>
+                </ol>
+                <h1>Простейшие логические элементы</h1>
+                <p>Простейшими логическими элементами являются элементы "И" (AND), "ИЛИ" (OR) и "НЕ"
+                    (NOT). Из них (или на их основе) можно создавать более сложные элементы.</p>
+                <h3>Обозначение упомянутых элементов на электронных схемах:</h3>
+                <img src="images/3_Basic.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3>Упомянутые элементы в Майнкрафте:</h3>
+                <img src="images/4_Basic.png" alt="IMAGE DOWNLOAD ERROR!">
+                <p class="end_of_part" id="AND"></p>
+                <h3>Логическое "И" (AND)</h3>
+                <img class="left_image" src="images/5_AND-Cirquit.png" alt="IMAGE DOWNLOAD ERROR!">
+                <p>Логическое "И" (также известное как "конъюнкция", "логическое умножение", "AND") ―
+                    это элемент, имеющий 2 (или более) входа и 1 выход. Сигнал на выходе равен "1"
+                    (логическая единица) тогда, когда на все входы (в данном случае их 2) подается "1".
+                    Если на любой вход подается сигнал, равный "0" (логический ноль), то на выходе
+                    тоже будет "0".</p>
+                <h3 class="subtitle">Таблица истинности:</h3>
+                <table>
+                    <tr>
+                        <th>X1</th>
+                        <th>X2</th>
+                        <th>Y</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+                <h3 class="subtitle">"Элемент "И" в Майнкрафте с разных ракурсов:</h3>
+                <div class="two_pictures">
+                    <img class="two_pictures_image" src="images/6_AND_1.png" alt="IMAGE DOWNLOAD ERROR!">
+                    <img class="two_pictures_image" src="images/7_AND_2.png" alt="IMAGE DOWNLOAD ERROR!">
+                </div>
+                <h3>Работа логического "И"</h3>
+                <h3 class="subtitle">Подача на элемент "И" сигналов "0" и "0" (лампа не горит):</h3>
+                <img src="images/8_AND-Work_1.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">Подача на элемент "И" сигналов "0" и "1" (лампа не горит):</h3>
+                <img src="images/9_AND-Work_2.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">Подача на элемент "И" сигналов "1" и "0" (лампа не горит):</h3>
+                <img src="images/10_AND-Work_3.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">Подача на элемент "И" сигналов "1" и "1" (лампа горит):</h3>
+                <img src="images/11_AND-Work_4.png" alt="IMAGE DOWNLOAD ERROR!">
+                <p class="end_of_part" id="OR"></p>
+                <h3>Логическое "ИЛИ" (OR)</h3>
+                <img class="left_image" src="images/12_OR-Cirquit.png" alt="IMAGE DOWNLOAD ERROR!">
+                <p>Логическое "ИЛИ" (также известное как "дизъюнкция", "логическое сложение", "OR") ―
+                    это элемент, который, как и предыдущий, имеет 2 (или более) входа и 1 выход. Сигнал
+                    на выходе равен "1" тогда, когда хотя бы на 1 вход подается "1". Выходной сигнал
+                    будет равен "0" только при подаче на все входы логических нулей.</p>
+                <h3 class="subtitle">Таблица истинности:</h3>
+                <table>
+                    <tr>
+                        <th>X1</th>
+                        <th>X2</th>
+                        <th>Y</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+                <h3 class="subtitle">"Элемент "ИЛИ" в Майнкрафте:</h3>
+                <img src="images/13_OR.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3>Работа логического "ИЛИ"</h3>
+                <h3 class="subtitle">Подача на элемент "ИЛИ" сигналов "0" и "0" (лампа не горит):</h3>
+                <img src="images/14_OR-Work_1.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">Подача на элемент "ИЛИ" сигналов "0" и "1" (лампа горит):</h3>
+                <img src="images/15_OR-Work_2.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">Подача на элемент "ИЛИ" сигналов "1" и "0" (лампа горит):</h3>
+                <img src="images/16_OR-Work_3.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">Подача на элемент "ИЛИ" сигналов "1" и "1" (лампа горит):</h3>
+                <img src="images/17__OR-Work_4.png" alt="IMAGE DOWNLOAD ERROR!">
+                <p class="end_of_part" id="NOT"></p>
+                <h3>Логическое "НЕ" (NOT)</h3>
+                <img class="left_image" src="images/18_NOT-Cirquit.png" alt="IMAGE DOWNLOAD ERROR!">
+                <p>Логическое "НЕ" (также известное как "инверсия", "логическое отрицание", "NOT") ―
+                    это элемент, имеющий 1 вход и 1 выход. Сигнал на выходе противоположен сигналу
+                    на входе.</p>
+                <h3 class="subtitle">Таблица истинности:</h3>
+                <table>
+                    <tr>
+                        <th>X</th>
+                        <th>Y</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+                <h3 class="subtitle">"Элемент "НЕ" в Майнкрафте с разных ракурсов:</h3>
+                <div class="two_pictures">
+                    <img class="two_pictures_image" src="images/19_NOT_1.png" alt="IMAGE DOWNLOAD ERROR!">
+                    <img class="two_pictures_image" src="images/20_NOT_2.png" alt="IMAGE DOWNLOAD ERROR!">
+                </div>
+                <h3>Работа логического "НЕ"</h3>
+                <h3 class="subtitle">"Подача на элемент "НЕ" сигнала "0" (лампа горит):</h3>
+                <img src="images/21_NOT-Work_1.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">"Подача на элемент "НЕ" сигнала "1" (лампа не горит):</h3>
+                <img src="images/22_NOT-Work_2.png" alt="IMAGE DOWNLOAD ERROR!">
+                <p class="end_of_part" id="Additional"></p>
+                <h1 class="additional_elements">Еще несколько логических элементов</h1>
+                <p>Рассмотрим логические элементы "И-НЕ", "ИЛИ-НЕ" и "Исключающее «ИЛИ»". Каждый из
+                    этих элементов можно создать из нескольких простейших или на основе одного
+                    простейшего.</p>
+                <h3>Обозначение упомянутых элементов на электронных схемах:</h3>
+                <img src="images/23_Additional.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3>Упомянутые элементы в Майнкрафте:</h3>
+                <img src="images/24_Additional.png" alt="IMAGE DOWNLOAD ERROR!">
+                <p class="end_of_part" id="NAND"></p>
+                <h3>"И-НЕ" (NAND)</h3>
+                <img class="left_image" src="images/25_NAND-Cirquit.png" alt="IMAGE DOWNLOAD ERROR!">
+                <p>Элемент "И-НЕ" (также известен как "штрих Шеффера" или "NAND") ― это элемент, имеющий
+                    2 (или более) входа и 1 выход. Принцип функционирования противоположен элементу
+                    "И": если подать "1" на все входы, то сигнал на выходе будет равен "0". Во всех
+                    остальных случаях ― "1".</p>
+                <h3 class="subtitle">Таблица истинности:</h3>
+                <table>
+                    <tr>
+                        <th>X1</th>
+                        <th>X2</th>
+                        <th>Y</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+                <h3 class="subtitle">"Элемент "И-НЕ" в Майнкрафте с разных ракурсов:</h3>
+                <div class="two_pictures">
+                    <img class="two_pictures_image" src="images/26_NAND_1.png" alt="IMAGE DOWNLOAD ERROR!">
+                    <img class="two_pictures_image" src="images/27_NAND_2.png" alt="IMAGE DOWNLOAD ERROR!">
+                </div>
+                <h3>Работа элемента "И-НЕ"</h3>
+                <h3 class="subtitle">Подача на элемент "И-НЕ" сигналов "0" и "0" (лампа горит):</h3>
+                <img src="images/28_NAND-Work_1.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">Подача на элемент "И-НЕ" сигналов "0" и "1" (лампа горит):</h3>
+                <img src="images/29_NAND-Work_2.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">Подача на элемент "И-НЕ" сигналов "1" и "0" (лампа горит):</h3>
+                <img src="images/30_NAND-Work_3.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">Подача на элемент "И-НЕ" сигналов "1" и "1" (лампа не горит):</h3>
+                <img src="images/31_NAND-Work_4.png" alt="IMAGE DOWNLOAD ERROR!">
+                <p class="end_of_part" id="NOR"></p>
+                <h3>"ИЛИ-НЕ" (NOR)</h3>
+                <img class="left_image" src="images/32_NOR-Cirquit.png" alt="IMAGE DOWNLOAD ERROR!">
+                <p>Элемент "ИЛИ-НЕ" (также известен как "стрелка Пирса" или "NOR") ― это элемент, имеющий
+                    2 (или более) входа и 1 выход. Принцип функционирования противоположен элементу
+                    "ИЛИ": при подаче "0" на все входы сигнал на выходе равен "1". Во всех остальных
+                    случаях ― "0".</p>
+                <h3 class="subtitle">Таблица истинности:</h3>
+                <table>
+                    <tr>
+                        <th>X1</th>
+                        <th>X2</th>
+                        <th>Y</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+                <h3 class="subtitle">"Элемент "ИЛИ-НЕ" в Майнкрафте с разных ракурсов:</h3>
+                <div class="two_pictures">
+                    <img class="two_pictures_image" src="images/33_NOR_1.png" alt="IMAGE DOWNLOAD ERROR!">
+                    <img class="two_pictures_image" src="images/34_NOR_2.png" alt="IMAGE DOWNLOAD ERROR!">
+                </div>
+                <h3>Работа элемента "ИЛИ-НЕ"</h3>
+                <h3 class="subtitle">Подача на элемент "ИЛИ-НЕ" сигналов "0" и "0" (лампа горит):</h3>
+                <img src="images/35_NOR-Work_1.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">Подача на элемент "ИЛИ-НЕ" сигналов "0" и "1" (лампа не горит):</h3>
+                <img src="images/36_NOR-Work_2.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">Подача на элемент "ИЛИ-НЕ" сигналов "1" и "0" (лампа не горит):</h3>
+                <img src="images/37_NOR-Work_3.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">Подача на элемент "ИЛИ-НЕ" сигналов "1" и "1" (лампа не горит):</h3>
+                <img src="images/38_NOR-Work_4.png" alt="IMAGE DOWNLOAD ERROR!">
+                <p class="end_of_part" id="XOR"></p>
+                <h3>"Исключающее «ИЛИ»" (XOR)</h3>
+                <img class="left_image" src="images/39_XOR-Cirquit.png" alt="IMAGE DOWNLOAD ERROR!">
+                <p>Элемент "Исключающее «ИЛИ»" (также известен как "сложение по модулю 2", "строгая
+                    дизъюнкция", "логическое вычитание", "XOR") ― это элемент, имеющий 2 входа и 1
+                    выход. Если сигналы, подаваемые на входы, имеют разные значения, то выходной сигнал
+                    равен "1"; при одинаковых входных сигналах выходной равен "0".</p>
+                <h3 class="subtitle">Таблица истинности:</h3>
+                <table>
+                    <tr>
+                        <th>X1</th>
+                        <th>X2</th>
+                        <th>Y</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+                <h3 class="subtitle">"Элемент "Исключающее «ИЛИ»" в Майнкрафте с разных ракурсов:</h3>
+                <div class="two_pictures">
+                    <img class="two_pictures_image" src="images/40_XOR_1.png" alt="IMAGE DOWNLOAD ERROR!">
+                    <img class="two_pictures_image" src="images/41_XOR_2.png" alt="IMAGE DOWNLOAD ERROR!">
+                </div>
+                <h3>Работа элемента "Исключающее «ИЛИ»"</h3>
+                <h3 class="subtitle">Подача на элемент "Исключающее «ИЛИ»" сигналов "0" и "0" (лампа не горит):</h3>
+                <img src="images/42_XOR-Work_1.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">Подача на элемент "Исключающее «ИЛИ»" сигналов "0" и "1" (лампа горит):</h3>
+                <img src="images/43_XOR-Work_2.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">Подача на элемент "Исключающее «ИЛИ»" сигналов "1" и "0" (лампа горит):</h3>
+                <img src="images/44_XOR-Work_3.png" alt="IMAGE DOWNLOAD ERROR!">
+                <h3 class="subtitle">Подача на элемент "Исключающее «ИЛИ»" сигналов "1" и "1" (лампа не горит):</h3>
+                <img src="images/45_XOR-Work_4.png" alt="IMAGE DOWNLOAD ERROR!">
+                <p class="end_of_part"></p>
+            </div>
+        </main>
+        <footer>
+            <h2>
+                <i>Автор сайта:</i>
+            </h2>
+            <h1>Павел Коротин</h1>
+            <h2>
+                <i>Использованные материалы:</i>
+            </h2>
+            <ul>
+                <li>
+                    <a href="https://ru.minecraft.wiki/w/%D0%A0%D0%B5%D0%B4%D1%81%D1%82%D0%BE%D1%83%D0%BD" target="_blank">Minecraft Wiki. Редстоун</a>
+                </li>
+                <li>
+                    <a href="https://ru.minecraft.wiki/w/%D0%A0%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE:%D0%A0%D0%B5%D0%B4%D1%81%D1%82%D0%BE%D1%83%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5_%D1%81%D1%85%D0%B5%D0%BC%D1%8B" target="_blank">Minecraft Wiki. Руководство: редстоуновые схемы</a>
+                </li>
+                <li>
+                    <a href="https://icraft.uz/topic17.html" target="_blank">iCraft. Туториал по редстоуну</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="https://ru-minecraft.ru/instrukcii-gajdy-minecraft/87-shemy-iz-redstouna-logicheskie-elementy.html" target="_blank">ru-minecraft.ru. [Схемы из редстоуна] Логические элементы</a>
+                </li>
+                <li>
+                    <a href="https://igm.gg/media/d/mekhanizmy-iz-redstouna-v-minecraft-polnyi-gaid-f741d3dc?srsltid=AYCX9vK0NTBOBVF4hs6i0CwEjg7Zb-3RjZDBgVQ88QpLl3Ssk1f7d-Om" target="_blank">IGM.GG. Механизмы из редстоуна в Minecraft: полный гайд</a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
